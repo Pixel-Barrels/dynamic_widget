@@ -25,10 +25,10 @@ class SliderParser extends WidgetParser {
         divisions: divisions,
 
         onChanged: (value) {
-          listener?.onValueChanged(
-              valueChangedEvent, widgetId, value);
-        
           DynamicWidgetBuilder.stateManager.states[widgetId]!.second = value;
+
+          listener?.onValueChanged(
+              valueChangedEvent, widgetId, value);        
         });
 
     DynamicWidgetBuilder.stateManager.setStateWidget(widgetId, widget);
