@@ -1,7 +1,8 @@
 #!/bin/sh
 # This is a generated file; do not edit or check into version control.
-export "FLUTTER_ROOT=/mnt/Esclavo/Apps/flutter/linux/flutter"
-export "FLUTTER_APPLICATION_PATH=/run/media/benjamin/BenjaminM2/Prototypes/minitoolbox/deps/dynamic_widget"
+export "FLUTTER_ROOT=/mnt/Esclavo/Apps/Flutter/flutter"
+export "FLUTTER_APPLICATION_PATH=/run/media/benjamin/559df85b-a026-41bc-bb9b-602906f570d7/Projects/TinyApp/main app/deps/dynamic_widget"
+export "FLUTTER_FRAMEWORK_SWIFT_PACKAGE_PATH=/run/media/benjamin/559df85b-a026-41bc-bb9b-602906f570d7/Projects/TinyApp/main app/deps/dynamic_widget/ios/Flutter/ephemeral/Packages/.packages/FlutterFramework"
 export "COCOAPODS_PARALLEL_CODE_SIGN=true"
 export "FLUTTER_TARGET=lib/main.dart"
 export "FLUTTER_BUILD_DIR=build"

@@ -1,7 +1,7 @@
 library icons_helper;
 
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+//import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 // Returns an icon by examining the name for the format ICON_LIBRARY.ICON_NAME and if not, looks for a Material icon of the ICON_NAME
 // For example fa.fiveHundredPx returns the icon named fiveHundredPx in the FontAwesome lib, if it didn't exist, it'd try to return the material icon named fiveHundredPx, otherwise you get null.
@@ -24,20 +24,24 @@ IconData? getIconUsingPrefix({required String name}) {
 
 // Returns an icon named in name favoring Font Awesome
 IconData? getIconGuessFavorFA({String? name}) {
-  if (FontAwesomeIconsMap[name!] != null) {
+  /*if (FontAwesomeIconsMap[name!] != null) {
     return FontAwesomeIconsMap[name];
   } else {
     return IconsMap[name];
-  }
+  }*/
+
+  return null;
 }
 
 // Returns an icon named in name favoring Material
 IconData? getIconGuessFavorMaterial({String? name}) {
-  if (IconsMap[name!] != null) {
+  /*if (IconsMap[name!] != null) {
     return IconsMap[name];
   } else {
     return FontAwesomeIconsMap[name];
-  }
+  }*/
+
+  return null;
 }
 
 String exportIconGuessFavorMaterial(IconData? iconData) {
@@ -47,11 +51,11 @@ String exportIconGuessFavorMaterial(IconData? iconData) {
     }
   }
 
-  for (var entry in FontAwesomeIconsMap.entries) {
+  /*for (var entry in FontAwesomeIconsMap.entries) {
     if (entry.value == iconData) {
       return entry.key;
     }
-  }
+  }*/
   return "android";
 }
 
@@ -62,7 +66,9 @@ IconData? getMaterialIcon({String? name}) {
 
 // Kinda self explanatory, no?
 IconData? getFontAwesomeIcon({String? name}) {
-  return FontAwesomeIconsMap[name!];
+  //return FontAwesomeIconsMap[name!];
+
+  return null;
 }
 
 /// Icon data map for Material Icons
@@ -1054,8 +1060,10 @@ const Map<String, IconData> IconsMap = <String, IconData>{
   'zoom_out_map': Icons.zoom_out_map
 };
 
+// TODO: Check if we should bring this back
+/*
 /// Icon data map for FontAwesome (currently 5.5)
-const Map<String, IconData> FontAwesomeIconsMap = <String, IconData>{
+const Map<String, dynamic> FontAwesomeIconsMap = <String, dynamic>{
   'zero': FontAwesomeIcons.zero,
   'one': FontAwesomeIcons.one,
   'two': FontAwesomeIcons.two,
@@ -3806,3 +3814,4 @@ const Map<String, IconData> FontAwesomeIconsMap = <String, IconData>{
   'z': FontAwesomeIcons.z,
   'zhihu': FontAwesomeIcons.zhihu
 };
+*/
